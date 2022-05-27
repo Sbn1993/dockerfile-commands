@@ -1,0 +1,31 @@
+# Docker CE for Linux installation script
+#
+# See https://docs.docker.com/engine/install/ for the installation steps.
+#
+# This script is meant for quick & easy install via:
+#   $ curl -fsSL https://get.docker.com -o get-docker.sh
+#   $ sh get-docker.sh
+
+
+--------------------------------------------------------
+DockerFile 
+
+FROM ubuntu
+MAINTAINER shashank77nandihalli@gmail.com
+RUN apt-get update
+RUN apt-get install nginx -y
+CMD ["echo","Image created"]
+
+docker build -t mynginxshashankbatch26 .
+
+
+-------------------
+Give a name to image
+
+docker tag <image-id of mynginxbatch26>shashank77nandihalli/mynginxshashankbatch26:latest
+
+docker tag b7a26667e95c shashank77nandihalli/mynginxshashankbatch26:latest 
+
+docker pull shashank77nandihalli/mynginxshashankbatch26
+
+------------------------------
